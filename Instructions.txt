@@ -1,0 +1,45 @@
+Project 9: Misinformation
+
+Instructions and Files description
+
+Files:
+Original Data Source: https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets
+
+1. True_data.csv : Dataset used for the project (contains verified, true news information)
+2. Fake_data.csv : Dataset used for the project (contains Fake news information)
+
+3. preprocessing.py : takes True_data.csv and Fake_data.csv as the input. Preprocesses the data for the models. Saves the preprocessed data as "preprocessed_data.csv)
+4. Logreg.py : takes preprocessed_data.csv as input. Implements TF-IDF + Logistic Regression. Saves the predictions as "predictions_baseline.csv).
+5. Model_RoBERTa.py: Script to finetune (train) the RoBERTa model. Saves the model and tokenizer for further use in the folder roberta_model (which gets automatically generated)
+6. RoBERTa.py : takes preprocessed_data.csv as input. Implements RoBERTa model. Saves the predictions as "predictions_RoBERTa.csv).
+7. analysis_viz.py : Script to compare, analyze and visualize the results of both the models. 
+8. dt2.py: Script to preprocess the Kaggle dataset. Stores the following 3 results in the following files- testdata2.csv, trainingdataX.csv, trainingdataY.csv
+
+9. 2logreg.py : Script to run both the models on the entire dataset. However, the code to run RoBERTa model on the entire dataset has been commented out at the end due to computational issues.
+
+10. Test.csv : original dataset containing real news information from Kaggle
+11. Fake.csv: original dataset containing fake news information from Kaggle.
+
+
+Libraries used:
+1. pandas
+2. re (regular exp)
+3. sklearn
+4. transformers
+5. datasets
+6. seaborn
+7. matplotlib
+
+
+Run the code in the following order:
+preprocessing.py 
+Logreg.py
+Model_RoBERTa.py (This only trains the model and saves it)
+RoBERTa.py
+analysis_viz.py
+dt2.py 
+2logreg.py
+
+
+
+ 
